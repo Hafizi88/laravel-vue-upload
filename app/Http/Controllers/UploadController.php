@@ -19,6 +19,7 @@ class UploadController extends Controller
     {
         $file = $request->file('file');
         Excel::import(new ProductsImport, $file);
+
         return response()->json([
             'result' => true
         ], 200);

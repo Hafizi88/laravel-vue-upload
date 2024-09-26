@@ -223,10 +223,11 @@ export default {
             form.append('file', this.selectedFile);
             axios.post('/upload', form)
             .then((res) => {
-                console.log(res)
+                alert('Upload complete');
             })
             .catch((error) => {
                 console.log('err');
+                alert('Upload have some error');
             }).finally(() => {
                 this.isLoading = false;
             });
